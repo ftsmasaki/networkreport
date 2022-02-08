@@ -4,7 +4,7 @@ import openpyxl
 from ping3 import ping
 
 # 調査対象（Excelファイル）を指定
-wb_source=openpyxl.load_workbook('test1.xlsx')
+wb_source=openpyxl.load_workbook('dest.xlsx')
 ws_source=wb_source['Sheet1']
 
 # レポート（Excelファイル）のファイル名を指定
