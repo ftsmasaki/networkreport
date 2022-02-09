@@ -5,11 +5,11 @@ import requests
 from requests import Timeout
 
 # 調査対象（Excelファイル）を指定
-wb_source=openpyxl.load_workbook('dest.xlsx')
+wb_source=openpyxl.load_workbook('destinations/dest.xlsx')
 ws_source=wb_source['Sheet1']
 
 # レポート（Excelファイル）のファイル名を指定
-filename_report='report_' + date.today().strftime('%Y%m%d') + '.xlsx'
+filename_report='reports/report_' + date.today().strftime('%Y%m%d') + '.xlsx'
 openpyxl.Workbook().save(filename_report)
 
 # データを2次元配列に格納
