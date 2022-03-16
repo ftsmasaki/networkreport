@@ -40,9 +40,11 @@ for i, destination in enumerate(destinations):
     ws.cell(row=i+2, column=2).value=result_ping
     # HTTPリクエスト送信
     try:
-        result_http=requests.get('http://' + destination, timeout=3.0).status_code
+        result_http=requests.get('http://' + destination, timeout=3.0, verify=False).status_code
     except:
         result_http='エラー'
+    
+    #print(requests.get('http://' + destination, timeout=3.0).url)
     ws.cell(row=i+2, column=3).value=result_http
     
 # 調査結果ファイルを保存
